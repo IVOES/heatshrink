@@ -1,0 +1,143 @@
+heatshrink.c:51:5: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+    fprintf(stderr, "heatshrink version %u.%u.%u by %s\n",
+    ^
+heatshrink.c:51:5: warning: %u in format string (no. 2) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+    fprintf(stderr, "heatshrink version %u.%u.%u by %s\n",
+    ^
+heatshrink.c:51:5: warning: %u in format string (no. 3) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+    fprintf(stderr, "heatshrink version %u.%u.%u by %s\n",
+    ^
+heatshrink.c:158:9: portability: %zd in format string (no. 1) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+        fprintf(stderr, "size %zd, io->size %zd\n", size, io->size);
+        ^
+heatshrink.c:158:9: portability: %zd in format string (no. 2) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+        fprintf(stderr, "size %zd, io->size %zd\n", size, io->size);
+        ^
+heatshrink.c:391:5: portability: %zd in format string (no. 3) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+    fprintf(cfg->out->fd == STDOUT_FILENO ? stderr : stdout,
+    ^
+heatshrink.c:391:5: portability: %zd in format string (no. 4) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+    fprintf(cfg->out->fd == STDOUT_FILENO ? stderr : stdout,
+    ^
+heatshrink_decoder.c:50:54: style:inconclusive: Function 'heatshrink_decoder_alloc' argument 2 names different: declaration 'expansion_buffer_sz2' definition 'window_sz2'. [funcArgNamesDifferent]
+                                             uint8_t window_sz2,
+                                                     ^
+heatshrink_decoder.h:76:13: note: Function 'heatshrink_decoder_alloc' argument 2 names different: declaration 'expansion_buffer_sz2' definition 'window_sz2'.
+    uint8_t expansion_buffer_sz2, uint8_t lookahead_sz2);
+            ^
+heatshrink_decoder.c:50:54: note: Function 'heatshrink_decoder_alloc' argument 2 names different: declaration 'expansion_buffer_sz2' definition 'window_sz2'.
+                                             uint8_t window_sz2,
+                                                     ^
+heatshrink_encoder.c:460:18: style: Variable 'len' is assigned a value that is never used. [unreadVariable]
+    uint16_t len = 0;
+                 ^
+test_heatshrink_dynamic.c:801:9: style: Condition 'log' is always false [knownConditionTrueFalse]
+    if (log) dump_buf("input", input, sizeof(input));
+        ^
+test_heatshrink_dynamic.c:799:15: note: Assignment 'log=0', assigned value is 0
+    int log = 0;
+              ^
+test_heatshrink_dynamic.c:801:9: note: Condition 'log' is always false
+    if (log) dump_buf("input", input, sizeof(input));
+        ^
+test_heatshrink_dynamic.c:813:9: style: Condition 'log' is always false [knownConditionTrueFalse]
+    if (log) dump_buf("comp", comp, packed_count);
+        ^
+test_heatshrink_dynamic.c:799:15: note: Assignment 'log=0', assigned value is 0
+    int log = 0;
+              ^
+test_heatshrink_dynamic.c:813:9: note: Condition 'log' is always false
+    if (log) dump_buf("comp", comp, packed_count);
+        ^
+test_heatshrink_dynamic.c:824:9: style: Condition 'log' is always false [knownConditionTrueFalse]
+    if (log) dump_buf("decomp", decomp, sizeof(input));
+        ^
+test_heatshrink_dynamic.c:799:15: note: Assignment 'log=0', assigned value is 0
+    int log = 0;
+              ^
+test_heatshrink_dynamic.c:824:9: note: Condition 'log' is always false
+    if (log) dump_buf("decomp", decomp, sizeof(input));
+        ^
+test_heatshrink_dynamic.c:843:9: style: Condition 'log' is always false [knownConditionTrueFalse]
+    if (log) dump_buf("input", input, sizeof(input));
+        ^
+test_heatshrink_dynamic.c:841:15: note: Assignment 'log=0', assigned value is 0
+    int log = 0;
+              ^
+test_heatshrink_dynamic.c:843:9: note: Condition 'log' is always false
+    if (log) dump_buf("input", input, sizeof(input));
+        ^
+test_heatshrink_dynamic.c:855:9: style: Condition 'log' is always false [knownConditionTrueFalse]
+    if (log) dump_buf("comp", comp, packed_count);
+        ^
+test_heatshrink_dynamic.c:841:15: note: Assignment 'log=0', assigned value is 0
+    int log = 0;
+              ^
+test_heatshrink_dynamic.c:855:9: note: Condition 'log' is always false
+    if (log) dump_buf("comp", comp, packed_count);
+        ^
+test_heatshrink_dynamic.c:866:9: style: Condition 'log' is always false [knownConditionTrueFalse]
+    if (log) dump_buf("decomp", decomp, sizeof(input));
+        ^
+test_heatshrink_dynamic.c:841:15: note: Assignment 'log=0', assigned value is 0
+    int log = 0;
+              ^
+test_heatshrink_dynamic.c:866:9: note: Condition 'log' is always false
+    if (log) dump_buf("decomp", decomp, sizeof(input));
+        ^
+test_heatshrink_dynamic.c:407:18: portability: %d in format string (no. 1) requires 'int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+    ASSERT_EQ_FMT(6, out_sz, "%d");
+                 ^
+test_heatshrink_dynamic.c:683:31: portability: %zd in format string (no. 1) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+        if (cfg->log_lvl > 1) printf("^^ sunk %zd\n", count);
+                              ^
+test_heatshrink_dynamic.c:693:35: portability: %zd in format string (no. 1) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+            if (cfg->log_lvl > 1) printf("^^ polled %zd\n", count);
+                                  ^
+test_heatshrink_dynamic.c:713:31: portability: %zd in format string (no. 1) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+        if (cfg->log_lvl > 1) printf("^^ sunk %zd\n", count);
+                              ^
+test_heatshrink_dynamic.c:725:35: portability: %zd in format string (no. 1) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+            if (cfg->log_lvl > 1) printf("^^ polled %zd\n", count);
+                                  ^
+test_heatshrink_dynamic.c:734:13: portability: %zd in format string (no. 1) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+            printf("\nExpected %zd, got %zu\n", (size_t)input_size, polled);
+            ^
+test_heatshrink_dynamic.c:746:13: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+            printf("*** mismatch at %d\n", i);
+            ^
+test_heatshrink_dynamic.c:749:21: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                    printf("in[%d] == 0x%02x ('%c') => out[%d] == 0x%02x ('%c')  %c\n",
+                    ^
+test_heatshrink_dynamic.c:749:21: warning: %d in format string (no. 4) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                    printf("in[%d] == 0x%02x ('%c') => out[%d] == 0x%02x ('%c')  %c\n",
+                    ^
+test_heatshrink_dynamic.c:1008:1: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+GREATEST_MAIN_DEFS();
+^
+test_heatshrink_dynamic.c:661:12: style: Same expression used in consecutive assignments of 'comp_sz' and 'decomp_sz'. [duplicateAssignExpression]
+    size_t comp_sz = input_size + (input_size/2) + 4;
+           ^
+test_heatshrink_dynamic.c:662:12: note: Same expression used in consecutive assignments of 'comp_sz' and 'decomp_sz'.
+    size_t decomp_sz = input_size + (input_size/2) + 4;
+           ^
+test_heatshrink_dynamic.c:661:12: note: Same expression used in consecutive assignments of 'comp_sz' and 'decomp_sz'.
+    size_t comp_sz = input_size + (input_size/2) + 4;
+           ^
+test_heatshrink_dynamic_theft.c:132:5: portability: %zd in format string (no. 1) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+    fprintf(f, "buf[%zd]:\n    ", r->size);
+    ^
+test_heatshrink_static.c:0:0: information: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details. [noValidConfiguration]
+
+^
+test_heatshrink_dynamic.c:1008:0: style: The function 'GREATEST_SET_TEARDOWN_CB' is never used. [unusedFunction]
+
+^
+test_heatshrink_dynamic.c:1008:0: style: The function 'greatest_do_assert_equal_t' is never used. [unusedFunction]
+
+^
+test_heatshrink_dynamic.c:881:0: style: The function 'pseudorandom_data_should_match' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
